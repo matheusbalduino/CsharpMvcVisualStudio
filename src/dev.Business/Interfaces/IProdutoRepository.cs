@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace dev.Business.Interfaces
 {
-    interface IProdutoRepository: IRepository<Produto>
+    public interface IProdutoRepository: IRepository<Produto>
     {
-        Task<Fornecedor> ObterProdutosPorFornecedor(Guid fornecedorId);
-        Task<Fornecedor> ObterProdutosFornecedores();
+        Task<IEnumerable<Produto>> ObterProdutosPorFornecedor(Guid fornecedorId);
+        Task<IEnumerable<Produto>> ObterProdutosFornecedores();
         Task<Produto> ObterProdutoFornecedor(Guid id);
     }
 }

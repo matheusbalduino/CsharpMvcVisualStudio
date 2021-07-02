@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace dev.Business.Interfaces
 {
-    interface IFornecedorRepository: IRepository<Fornecedor>
+    public interface IFornecedorRepository: IRepository<Fornecedor>
     {
         Task<Fornecedor> ObterFornecedorEndereco(Guid id);
 
